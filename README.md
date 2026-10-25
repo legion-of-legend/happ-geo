@@ -11,6 +11,10 @@
 
 ## Обновление
 
+Файлы обновляются автоматически каждый понедельник в 03:00 UTC: workflow [`update-geo.yml`](.github/workflows/update-geo.yml) запускает `build.py`, проверяет, что Xray загружает новые файлы со всеми категориями, и коммитит их, только если данные изменились. Запустить вручную можно на вкладке Actions → Update geo files → Run workflow.
+
+Вручную:
+
 ```bash
 python3 build.py
 git commit -am "Update geo files" && git push
